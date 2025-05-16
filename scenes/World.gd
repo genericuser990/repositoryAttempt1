@@ -16,8 +16,6 @@ func _ready():
 #	pass
 
 
-
-
 func _on_Kill_Box_body_entered(body):
 	player.respawn()
 	pass # Replace with function body.
