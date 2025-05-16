@@ -32,6 +32,7 @@ func _process(delta):
 
 
 func respawn() :
+	print("respawn")
 	position = Vector2(screen_size.x/2, screen_size.y/2)
 
 
