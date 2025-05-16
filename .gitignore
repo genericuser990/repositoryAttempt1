@@ -1,0 +1,9 @@
+# Godot 3.5 specific ignores
+.godot/
+.import/
+export.cfg
+export_credentials.cfg
+*.translation
+.mono/
+data_*/
+mono_crash.*.json
