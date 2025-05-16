@@ -29,3 +29,6 @@ func _process(delta):
 	# Prevent going off screen
 	position.x = clamp(position.x, 0, screen_size.x)
 	position.y = clamp(position.y, 0, screen_size.y)
+
+func respawn():
+	position = Vector2(screen_size.x/2, screen_size.y/2)
