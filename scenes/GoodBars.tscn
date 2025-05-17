@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://sprites/Ui/Receptacle/LifeBarMiniProgress.png" type="Texture" id=1]
+[ext_resource path="res://sprites/Ui/Receptacle/Receptacle Sphere/ProgressMana.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Ui/Receptacle/Receptacle Sphere/BackgroundBamboo.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Ui/Receptacle/LifeBarMiniUnder.png" type="Texture" id=4]
+
+[node name="GoodBars" type="HBoxContainer"]
+margin_right = 127.0
+margin_bottom = 32.0
+
+[node name="PortraitProgress" type="TextureProgress" parent="."]
+margin_right = 32.0
+margin_bottom = 32.0
+max_value = 20.0
+value = 15.0
+texture_under = ExtResource( 3 )
+texture_progress = ExtResource( 2 )
+texture_progress_offset = Vector2( 5, 5 )
+fill_mode = 3
+
+[node name="Tween" type="Tween" parent="PortraitProgress"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 36.0
+margin_right = 127.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 91, 32 )
+
+[node name="VSplitContainer" type="VSplitContainer" parent="VBoxContainer"]
+margin_right = 91.0
+
+[node name="LifeBar" type="TextureProgress" parent="VBoxContainer"]
+margin_top = 4.0
+margin_right = 91.0
+margin_bottom = 9.0
+rect_min_size = Vector2( 91, 5 )
+value = 60.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 1 )
+nine_patch_stretch = true
+stretch_margin_left = 1
+stretch_margin_top = 1
+stretch_margin_right = 1
+stretch_margin_bottom = 1
+
+[node name="ManaBar" type="TextureProgress" parent="VBoxContainer"]
+margin_top = 13.0
+margin_right = 91.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 60, 4 )
+value = 100.0
+texture_under = ExtResource( 4 )
+texture_progress = ExtResource( 1 )
+nine_patch_stretch = true
+stretch_margin_left = 1
+stretch_margin_top = 1
+stretch_margin_right = 1
+stretch_margin_bottom = 1
