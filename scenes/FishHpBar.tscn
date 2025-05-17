@@ -8,18 +8,18 @@
 
 [node name="FishHpBar" type="HBoxContainer"]
 margin_right = 338.0
-margin_bottom = 30.0
+margin_bottom = 23.0
 
 [node name="FishCounter" parent="." instance=ExtResource( 1 )]
 margin_right = 60.0
-margin_bottom = 30.0
-rect_min_size = Vector2( 60, 23 )
+margin_bottom = 23.0
+rect_min_size = Vector2( 60, 20 )
 
 [node name="TextureProgress" type="TextureProgress" parent="."]
 margin_left = 64.0
-margin_right = 338.0
-margin_bottom = 30.0
-rect_min_size = Vector2( 274, 14 )
+margin_right = 264.0
+margin_bottom = 23.0
+rect_min_size = Vector2( 200, 14 )
 value = 47.0
 texture_under = ExtResource( 3 )
 texture_progress = ExtResource( 2 )

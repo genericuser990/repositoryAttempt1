@@ -21,6 +21,11 @@ IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
 UserData="*res://addons/github-integration/scripts/user_data.gd"
 RestHandler="*res://addons/github-integration/scenes/RestHandler.tscn"
 
+[display]
+
+window/size/width=320
+window/size/height=180
+
 [editor_plugins]
 
 enabled=PoolStringArray(  )

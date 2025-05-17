@@ -8,7 +8,7 @@
 script = ExtResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 127, 229 )
+position = Vector2( 143, 112 )
 
 [node name="KillBox" parent="." instance=ExtResource( 1 )]
 position = Vector2( 878, 494 )
