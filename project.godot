@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Attempt1"
-run/main_scene="res://Label.tscn"
+run/main_scene="res://scenes/World.tscn"
 config/icon="res://sprites/icon.png"
 
 [autoload]
@@ -20,6 +20,11 @@ PluginSettings="*res://addons/github-integration/scripts/PluginSettings.gd"
 IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
 UserData="*res://addons/github-integration/scripts/user_data.gd"
 RestHandler="*res://addons/github-integration/scenes/RestHandler.tscn"
+
+[display]
+
+window/size/width=320
+window/size/height=180
 
 [editor_plugins]
 
