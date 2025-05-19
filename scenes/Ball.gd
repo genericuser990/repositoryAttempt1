@@ -25,3 +25,8 @@ func _on_Area_2D2_body_entered(body):
 func _on_Area_2D_body_entered(body):
 	print("bottom")
 	dy *= -1
+
+
+func _on_Paddle_body_entered(body):
+	print("right")
+	dx *= -1
