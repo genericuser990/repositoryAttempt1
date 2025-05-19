@@ -1,16 +1,45 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/KillBox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/World.gd" type="Script" id=2]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://sprites/Boy/Faceset.png" type="Texture" id=4]
+[ext_resource path="res://sprites/FX/Projectile/Arrow.png" type="Texture" id=5]
+
+[sub_resource type="ParticlesMaterial" id=1]
+emission_shape = 1
+emission_sphere_radius = 1.0
+flag_disable_z = true
+gravity = Vector3( 0, 98, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
 
 [node name="World" type="Node2D"]
 script = ExtResource( 2 )
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2( -3, -1 )
+points = PoolVector2Array( 41, 8, 47, 21, 49, 29, 42, 47, 71, 49, 78, 38, 83, 19, 91, 44, 91, 54, 74, 61, 51, 65, 64, 71, 69, 71, 69, 75, 75, 80, 84, 79, 88, 70, 95, 80, 87, 87 )
+texture = ExtResource( 5 )
+texture_mode = 1
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 143, 112 )
 
 [node name="KillBox" parent="." instance=ExtResource( 1 )]
 position = Vector2( 215, 120 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( -3, -1 )
+texture = ExtResource( 4 )
+texture_rotation_degrees = 30.4
+polygon = PoolVector2Array( 5, 5, 9, 1, 30, 12, 37, 31, 17, 34 )
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+
+[node name="Particles2D" type="Particles2D" parent="."]
+emitting = false
+process_material = SubResource( 1 )
 
 [connection signal="body_entered" from="KillBox" to="." method="_on_KillBox_body_entered"]

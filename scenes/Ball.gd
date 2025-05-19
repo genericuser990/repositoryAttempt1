@@ -5,6 +5,8 @@ extends KinematicBody2D
 # var a = 2
 # var b = "text"
 
+onready var sprite := $Faceset
+
 var dx = 1;
 var dy = -1;
 # Called when the node enters the scene tree for the first time.
@@ -14,6 +16,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	var temp = sprite.texture.get_data()
+	temp.lock()
+	
 	position.x += dx
 	position.y += dy
 
