@@ -18,8 +18,6 @@ func _process(delta):
 	position.y += dy
 
 
-
-
 func _on_RigidBody2D2_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	print("bot")
 	dy *= -1
