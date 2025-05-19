@@ -1,20 +1,12 @@
-extends Area2D
+extends KinematicBody2D
 
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
 
-var velocity = 2
 
-# Called when the node enters the scene tree for the first time.
+onready var sprite := $foo
+
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	if Input.is_action_pressed("move_up"):
-		position.y -= velocity
-	if Input.is_action_pressed("move_down"):
-		position.y += velocity
+	sprite.offset.x = 50

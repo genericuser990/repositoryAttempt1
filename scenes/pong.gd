@@ -13,12 +13,8 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-# func _process(delta):
-#	pass
-
-func _on_Ball_paddle_bounced():
+func _process(delta):
 	ui.add1()
+	pass
 
 
-func _on_Ball_wall_bounced():
-	ui.add2()
