@@ -3,7 +3,7 @@
 [ext_resource path="res://sprites/icon.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 31.5, 29.5 )
+extents = Vector2( 12.5, 10.5 )
 
 [node name="KillBox" type="Area2D"]
 
@@ -13,4 +13,5 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 rotation = 1.5708
+scale = Vector2( 0.356888, 0.385853 )
 texture = ExtResource( 1 )
