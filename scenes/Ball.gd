@@ -17,14 +17,11 @@ func _process(delta):
 	position.x += dx
 	position.y += dy
 
-
-func _on_RigidBody2D2_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
-	print("bot")
+func _on_Area_2D2_body_entered(body):
+	print("top")
 	dy *= -1
 
 
-
-
-func _on_RigidBody2D_body_entered(body):
-	print("top")
+func _on_Area_2D_body_entered(body):
+	print("bottom")
 	dy *= -1
