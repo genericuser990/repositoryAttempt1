@@ -22,7 +22,7 @@ position = Vector2( -269, 2 )
 script = ExtResource( 6 )
 
 [node name="Paddle" parent="." instance=ExtResource( 1 )]
-position = Vector2( 230, 35 )
+position = Vector2( 206, 23 )
 script = ExtResource( 6 )
 
 [node name="Area 2D2" type="Area2D" parent="."]
