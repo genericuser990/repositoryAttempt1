@@ -17,5 +17,6 @@ func _ready():
 
 
 func _on_KillBox_body_entered(body):
+	EventBus.emit_signal("onPlayerHit")
 	player.respawn()
 	pass # Replace with function body.
