@@ -42,7 +42,8 @@ rotation = -1.5708
 shape = SubResource( 3 )
 
 [node name="Area 2D" type="Area2D" parent="."]
-position = Vector2( -4, 177 )
+position = Vector2( -3, 173 )
+scale = Vector2( 0.709977, 1.00614 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -66,8 +67,6 @@ margin_top = -48.0
 margin_right = 289.0
 margin_bottom = 132.0
 
-[connection signal="paddle_bounced" from="Ball" to="." method="_on_Ball_paddle_bounced"]
-[connection signal="wall_bounced" from="Ball" to="." method="_on_Ball_wall_bounced"]
 [connection signal="body_entered" from="Paddle2" to="Ball" method="_on_Paddle_body_entered"]
 [connection signal="body_entered" from="Paddle" to="Ball" method="_on_Paddle_body_entered"]
 [connection signal="area_entered" from="Area 2D2" to="Ball" method="_on_Area_2D2_area_entered"]
