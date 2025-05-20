@@ -22,7 +22,7 @@ position = Vector2( -269, 2 )
 script = ExtResource( 6 )
 
 [node name="Paddle" parent="." instance=ExtResource( 1 )]
-position = Vector2( 230, 35 )
+position = Vector2( -270, 82 )
 script = ExtResource( 6 )
 
 [node name="Area 2D2" type="Area2D" parent="."]
@@ -62,10 +62,10 @@ __meta__ = {
 }
 
 [node name="Control" parent="." instance=ExtResource( 4 )]
-margin_left = -32.0
-margin_top = -48.0
-margin_right = 289.0
-margin_bottom = 132.0
+margin_left = -90.0
+margin_top = -52.0
+margin_right = 231.0
+margin_bottom = 128.0
 
 [connection signal="body_entered" from="Paddle2" to="Ball" method="_on_Paddle_body_entered"]
 [connection signal="body_entered" from="Paddle" to="Ball" method="_on_Paddle_body_entered"]
