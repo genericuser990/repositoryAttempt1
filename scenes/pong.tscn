@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/Paddle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Ball.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/pong.gd" type="Script" id=3]
 [ext_resource path="res://scenes/pongui.tscn" type="PackedScene" id=4]
-[ext_resource path="res://sprites/Boy/Faceset.png" type="Texture" id=5]
 [ext_resource path="res://scenes/Paddle.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=3]
@@ -15,66 +14,40 @@ position = Vector2( 78, 54 )
 script = ExtResource( 3 )
 
 [node name="Ball" parent="." instance=ExtResource( 2 )]
-position = Vector2( 106, 47 )
+position = Vector2( 84, 37 )
 
 [node name="Paddle2" parent="." instance=ExtResource( 1 )]
-position = Vector2( -269, 2 )
+position = Vector2( -52, 37 )
 script = ExtResource( 6 )
 
 [node name="Paddle" parent="." instance=ExtResource( 1 )]
-<<<<<<< HEAD
-position = Vector2( 206, 23 )
+position = Vector2( 217, 32 )
 
->>>>>>> a96615370171659786af95502f25690c97f46e10
-script = ExtResource( 6 )
-
-[node name="Area 2D2" type="Area2D" parent="."]
+[node name="Area 2D2" type="StaticBody2D" parent="."]
 position = Vector2( -7, -15 )
 __meta__ = {
 "_edit_group_": true
 }
-
-[node name="Sprite" type="Sprite" parent="Area 2D2"]
-position = Vector2( 146.5, -43 )
-scale = Vector2( 14.3947, 0.144737 )
-texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area 2D2"]
 position = Vector2( 146.5, -42.5 )
 rotation = -1.5708
 shape = SubResource( 3 )
 
-[node name="Area 2D" type="Area2D" parent="."]
-position = Vector2( -3, 173 )
-scale = Vector2( 0.709977, 1.00614 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="Area 2D"]
-position = Vector2( 146, -43 )
-scale = Vector2( 14.3684, 0.144737 )
-texture = ExtResource( 5 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area 2D"]
-position = Vector2( 147, -42 )
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area 2D2"]
+position = Vector2( 108.367, 145.742 )
 rotation = -1.5708
+scale = Vector2( 1.00614, 0.709977 )
 shape = SubResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="Control" parent="." instance=ExtResource( 4 )]
-margin_left = -90.0
+margin_left = -79.0
 margin_top = -52.0
-margin_right = 231.0
+margin_right = 242.0
 margin_bottom = 128.0
 
 [connection signal="body_entered" from="Paddle2" to="Ball" method="_on_Paddle_body_entered"]
 [connection signal="body_entered" from="Paddle" to="Ball" method="_on_Paddle_body_entered"]
-[connection signal="area_entered" from="Area 2D2" to="Ball" method="_on_Area_2D2_area_entered"]
-[connection signal="body_entered" from="Area 2D2" to="Ball" method="_on_Area_2D2_body_entered"]
-[connection signal="body_entered" from="Area 2D2" to="Ball" method="_on_RigidBody2D_body_entered"]
-[connection signal="area_entered" from="Area 2D" to="Ball" method="_on_Area_2D_area_entered"]
-[connection signal="body_entered" from="Area 2D" to="Ball" method="_on_Area_2D_body_entered"]
-[connection signal="body_entered" from="Area 2D" to="Ball" method="_on_RigidBody2D_body_entered"]
