@@ -18,7 +18,7 @@ script = ExtResource( 3 )
 position = Vector2( 106, 47 )
 
 [node name="Paddle2" parent="." instance=ExtResource( 1 )]
-position = Vector2( -66, 32 )
+position = Vector2( -269, 2 )
 script = ExtResource( 6 )
 
 [node name="Paddle" parent="." instance=ExtResource( 1 )]
@@ -71,8 +71,8 @@ margin_bottom = 132.0
 [connection signal="body_entered" from="Paddle2" to="Ball" method="_on_Paddle_body_entered"]
 [connection signal="body_entered" from="Paddle" to="Ball" method="_on_Paddle_body_entered"]
 [connection signal="area_entered" from="Area 2D2" to="Ball" method="_on_Area_2D2_area_entered"]
-[connection signal="body_entered" from="Area 2D2" to="Ball" method="_on_RigidBody2D_body_entered"]
 [connection signal="body_entered" from="Area 2D2" to="Ball" method="_on_Area_2D2_body_entered"]
+[connection signal="body_entered" from="Area 2D2" to="Ball" method="_on_RigidBody2D_body_entered"]
 [connection signal="area_entered" from="Area 2D" to="Ball" method="_on_Area_2D_area_entered"]
-[connection signal="body_entered" from="Area 2D" to="Ball" method="_on_RigidBody2D_body_entered"]
 [connection signal="body_entered" from="Area 2D" to="Ball" method="_on_Area_2D_body_entered"]
+[connection signal="body_entered" from="Area 2D" to="Ball" method="_on_RigidBody2D_body_entered"]
