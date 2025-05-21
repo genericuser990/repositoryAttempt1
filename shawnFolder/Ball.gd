@@ -20,7 +20,8 @@ func _ready():
 func _physics_process(delta):
 	if (!game_end):
 		vel = vel.normalized() * speed
-		speed *= 1 + delta/40
+		# wot?
+		#speed *= 1 + delta/40
 		
 		if (out_of_bounds()):
 			emit_signal("game_over")
