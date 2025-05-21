@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 5, 33.5 )
 
-[node name="Paddle" type="Area2D"]
+[node name="Paddle" type="KinematicBody2D"]
 position = Vector2( 0, -3 )
 script = ExtResource( 2 )
 
