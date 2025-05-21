@@ -5,22 +5,30 @@ extends Control
 # var a = 2
 # var b = "text"
 
-onready var score1 := $Label
-onready var score2 := $Label2
+onready var ScoreLabel := $ScoreLabel
+onready var TimeLabel := $TimeLabel
 
-var count1 = 0
-var count2 = 0
+var score = 0
+var time = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-
-
-
-func add1() :
-	count1 += 1
-	score1.text = "score 1 %s" % count1
 	
-func add2() :
-	count2 += 1
-	score2.text = "score 2 %s" % count2
+func _process(delta):
+	add_time(delta)
+
+func set_score(string):
+	ScoreLabel.text = string
+	
+func set_time(string):
+	TimeLabel.text = string
+
+func add_score(n) :
+	score += n
+	set_score("Score: %s" % score)
+	
+func add_time(n) :
+	time += n
+	time = stepify(time, 0.01)
+	set_time("Time: %s" % time)

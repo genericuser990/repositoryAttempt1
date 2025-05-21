@@ -1,7 +1,6 @@
 extends KinematicBody2D
 
-signal paddle_bounced
-signal wall_bounced
+signal hit_paddle
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -21,4 +20,4 @@ func _physics_process(delta):
 		vel = vel.bounce(collision.normal)
 		if collision.get_collider().name == "Paddle" or collision.get_collider().name == "Paddle2":
 			# Increment score here later
-			print("paddle")
+			emit_signal("hit_paddle")
