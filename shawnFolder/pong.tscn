@@ -14,28 +14,33 @@ position = Vector2( 78, 54 )
 script = ExtResource( 4 )
 
 [node name="Ball" parent="." instance=ExtResource( 1 )]
-position = Vector2( 84, 37 )
+position = Vector2( -78, -49 )
 
 [node name="Paddle2" parent="." instance=ExtResource( 5 )]
 position = Vector2( -52, 37 )
+scale = Vector2( 0.75, 0.75 )
 script = ExtResource( 2 )
 
 [node name="Paddle" parent="." instance=ExtResource( 5 )]
 position = Vector2( 217, 32 )
+scale = Vector2( 0.75, 0.75 )
 
-[node name="Area 2D2" type="StaticBody2D" parent="."]
-position = Vector2( -7, -15 )
+[node name="Walls" type="StaticBody2D" parent="."]
+position = Vector2( -1, -15 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area 2D2"]
-position = Vector2( 146.5, -42.5 )
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls"]
+position = Vector2( 145, -42 )
 rotation = -1.5708
 shape = SubResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area 2D2"]
-position = Vector2( 108.367, 145.742 )
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls"]
+position = Vector2( 103, 144 )
 rotation = -1.5708
 scale = Vector2( 1.00614, 0.709977 )
 shape = SubResource( 3 )
@@ -44,7 +49,10 @@ __meta__ = {
 }
 
 [node name="Control" parent="." instance=ExtResource( 3 )]
-margin_left = -79.0
-margin_top = -52.0
-margin_right = 242.0
-margin_bottom = 128.0
+margin_left = -78.0
+margin_top = -53.0
+margin_right = 243.0
+margin_bottom = 127.0
+__meta__ = {
+"_edit_lock_": true
+}
