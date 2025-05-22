@@ -7,6 +7,7 @@
 extents = Vector2( 8.66667, 5.33333 )
 
 [node name="Bullet" type="Area2D"]
+rotation = 0.633555
 scale = Vector2( 0.75, 0.75 )
 script = ExtResource( 2 )
 

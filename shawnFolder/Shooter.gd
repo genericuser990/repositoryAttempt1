@@ -22,7 +22,7 @@ func _physics_process(delta):
 func move():
 	vel.x = Input.get_axis("a_pressed", "d_pressed")
 	vel.y = Input.get_axis("w_pressed", "s_pressed")
-	vel = vel.normalized() * speed
+	vel = vel.normalized() * speed 
 	move_and_slide(vel)
 	
 func look_at_mouse():

@@ -1,4 +1,4 @@
-extends Node2D
+extends Node
 
 
 # Declare member variables here. Examples:
@@ -21,7 +21,7 @@ func _physics_process(delta):
 		can_shoot = false
 		timer.start()
 		var b = Bullet.instance()
-		b.transform = shooter.transform
+		b.setBullet(shooter.position, shooter.rotation)
 		add_child(b)
 
 func _on_timeout():

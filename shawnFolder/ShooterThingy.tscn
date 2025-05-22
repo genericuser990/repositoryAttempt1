@@ -4,7 +4,7 @@
 [ext_resource path="res://shawnFolder/Shooter.tscn" type="PackedScene" id=2]
 [ext_resource path="res://shawnFolder/ShooterThingy.gd" type="Script" id=3]
 
-[node name="ShooterThingy" type="Node2D"]
+[node name="ShooterManager" type="Node"]
 script = ExtResource( 3 )
 Bullet = ExtResource( 1 )
 
