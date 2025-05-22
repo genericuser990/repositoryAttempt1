@@ -1,10 +1,5 @@
 extends Node
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = Q"text"
-
 export (PackedScene) var Bullet
 onready var shooter := $Shooter
 onready var timer := $Timer
@@ -18,6 +13,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	if (Input.is_action_pressed("left_click") and can_shoot):
+		# create bullet
 		can_shoot = false
 		timer.start()
 		var b = Bullet.instance()

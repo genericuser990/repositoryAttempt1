@@ -11,6 +11,7 @@ var mousepos := get_global_mouse_position()
 
 # Called when the node enters the scene tree for the first time.
 
+# bullets are given a position to spawn and direction to move
 func setBullet(_position: Vector2, rotation : float):
 	var dir = Vector2.RIGHT.rotated(rotation)
 	rotation_degrees = rotation * 180 / PI
@@ -22,4 +23,5 @@ func _physics_process(delta):
 	position += vel * delta
 
 func _on_VisibilityNotifier2D_screen_exited():
+	# remove bullet
 	queue_free()
