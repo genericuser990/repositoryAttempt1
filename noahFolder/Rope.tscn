@@ -10,7 +10,7 @@ ropePeices = 10
 ropePeice = ExtResource( 3 )
 
 [node name="RopeEnd1" parent="." instance=ExtResource( 1 )]
-position = Vector2( 80, -11 )
+position = Vector2( 80, 89 )
 
 [node name="RopeEnd2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 212, -110 )
+position = Vector2( 211, 95 )
