@@ -5,8 +5,8 @@ extends KinematicBody2D
 # var a = 2
 # var b = "text"
 
-export var speed = 100
-var vel = Vector2.ZERO
+export var speed := 100
+var vel := Vector2.ZERO
 
 
 # Called when the node enters the scene tree for the first time.

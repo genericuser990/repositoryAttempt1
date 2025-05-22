@@ -7,7 +7,6 @@
 [sub_resource type="CircleShape2D" id=1]
 
 [node name="Shooter" type="KinematicBody2D"]
-position = Vector2( 166, 66 )
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
