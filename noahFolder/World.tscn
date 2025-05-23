@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://noahFolder/World.gd" type="Script" id=1]
 [ext_resource path="res://noahFolder/PhysicsBall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://shawnFolder/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://noahFolder/Rope.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -43,5 +44,7 @@ shape = SubResource( 2 )
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Map"]
 position = Vector2( 160, -319 )
 shape = SubResource( 2 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
 
 [editable path="Rope"]

@@ -17,7 +17,6 @@ func _process(delta):
 		# idk why 3 but viewport demands it
 		# actually its global mouse is in screen pixels, viewport has it's own pixel resolution
 		position = get_global_mouse_position()/3
-		print(get_global_mouse_position())
 
 
 func on_button_down():

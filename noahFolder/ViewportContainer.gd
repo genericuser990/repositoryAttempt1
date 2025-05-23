@@ -14,4 +14,4 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	var a = "%s, %s" % [get_global_mouse_position().x, get_global_mouse_position().y]
-	DebugScript.show(a)
+	#DebugScript.show(a)
