@@ -16,7 +16,6 @@ export (PackedScene) var ropePeice
 func _ready():
 	length = (ropeEnd2.position - ropeEnd1.position).length()
 	var ropePieceLength = length / ropePeices
-	print(ropePieceLength)
 	
 	var ratio =  1.0 / ropePeices
 	var angle = (ropeEnd2.position - ropeEnd1.position).angle() - PI/2
