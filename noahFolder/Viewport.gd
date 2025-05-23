@@ -1,8 +1,5 @@
 extends Viewport
 
-func setViewPort(world : World2D):
-	world_2d = world
-	print(world_2d == world)
+func setViewPort(_world : World2D):
+	world_2d = _world
 	
-	print(world)
-	print(world_2d)

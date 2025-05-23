@@ -14,12 +14,15 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if (mouseDown):
-		position = get_global_mouse_position() - of
+		# idk why 3 but viewport demands it
+		# actually its global mouse is in screen pixels, viewport has it's own pixel resolution
+		position = get_global_mouse_position()/3
+		print(get_global_mouse_position())
 
 
 func on_button_down():
 	mouseDown = true
-	of = get_global_mouse_position() - position
+	#of = get_global_mouse_position() - position
 	
 func on_button_up():
 	mouseDown = false
