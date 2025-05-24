@@ -47,4 +47,18 @@ shape = SubResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+visible = false
+position = Vector2( -103, 76 )
+emitting = false
+lifetime = 2.0
+emission_shape = 2
+emission_rect_extents = Vector2( 1, 100 )
+gravity = Vector2( 500, 98 )
+initial_velocity = 77.98
+initial_velocity_random = 0.25
+tangential_accel = 9.17
+tangential_accel_random = 0.17
+scale_amount = 3.0
+
 [editable path="Rope"]
