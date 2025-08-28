@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://noahFolder/World.gd" type="Script" id=1]
-[ext_resource path="res://noahFolder/PhysicsBall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://noahFolder/year1term1/World.gd" type="Script" id=1]
+[ext_resource path="res://noahFolder/year1term1/PhysicsBall.tscn" type="PackedScene" id=2]
 [ext_resource path="res://shawnFolder/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://noahFolder/Rope.tscn" type="PackedScene" id=5]
+[ext_resource path="res://noahFolder/year1term1/Rope.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10, 296.5 )

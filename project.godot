@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Node",
 "class": "animal",
 "language": "GDScript",
-"path": "res://noahFolder/baseNode.gd"
+"path": "res://noahFolder/year1term1/baseNode.gd"
 } ]
 _global_script_class_icons={
 "animal": ""
@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Attempt1"
-run/main_scene="res://noahFolder/SceneManager.tscn"
+run/main_scene="res://noahFolder/year1term1/SceneManager.tscn"
 config/icon="res://sprites/icon.png"
 
 [autoload]
@@ -30,8 +30,8 @@ PluginSettings="*res://addons/github-integration/scripts/PluginSettings.gd"
 IconLoaderGithub="*res://addons/github-integration/scripts/IconLoaderGithub.gd"
 UserData="*res://addons/github-integration/scripts/user_data.gd"
 RestHandler="*res://addons/github-integration/scenes/RestHandler.tscn"
-EventBus="*res://noahFolder/EventBus.gd"
-DebugScript="*res://noahFolder/DebugScript.gd"
+EventBus="*res://noahFolder/year1term1/EventBus.gd"
+DebugScript="*res://noahFolder/year1term1/DebugScript.gd"
 
 [display]
 

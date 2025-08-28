@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://sprites/Ui/Receptacle/LifeBarMiniProgress.png" type="Texture" id=1]
-[ext_resource path="res://noahFolder/GoodBars.tscn" type="PackedScene" id=2]
+[ext_resource path="res://noahFolder/year1term1/GoodBars.tscn" type="PackedScene" id=2]
 [ext_resource path="res://sprites/Ui/Theme/Theme Wood/nine_path_panel.png" type="Texture" id=3]
 [ext_resource path="res://sprites/Ui/Receptacle/LifeBarMiniUnder.png" type="Texture" id=5]
 [ext_resource path="res://sprites/Ui/Receptacle/Receptacle Sphere/BackgroundFlask.png" type="Texture" id=6]
