@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://noahFolder/year1term1/Rope.gd" type="Script" id=1]
+[ext_resource path="res://noahFolder/year1term1/RopeEnd.tscn" type="PackedScene" id=2]
+[ext_resource path="res://noahFolder/year1term1/RopePiece.tscn" type="PackedScene" id=3]
+
+[node name="Rope" type="Node"]
+script = ExtResource( 1 )
+ropePeices = 10
+ropePeice = ExtResource( 3 )
+
+[node name="RopeEnd1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 80, 89 )
+
+[node name="RopeEnd2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 211, 95 )

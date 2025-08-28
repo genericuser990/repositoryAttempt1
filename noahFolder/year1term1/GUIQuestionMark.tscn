@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://scenes/FishHpBar.tscn" type="PackedScene" id=1]
+[ext_resource path="res://noahFolder/year1term1/FishHpBar.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/Items/Food/Fish.png" type="Texture" id=2]
 [ext_resource path="res://sprites/Ui/Theme/Theme Wood/nine_path_panel_interior.png" type="Texture" id=3]
 
