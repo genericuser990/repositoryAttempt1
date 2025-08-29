@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 export var walk_speed = 75
-export var run_speed = 150
-export var air_speed = 100
+export var run_speed = 175
+export var air_speed = 120
 export var jump_speed = 700
 export var gravity = 75
 var speed = walk_speed
@@ -20,7 +20,7 @@ onready var prev_state = null
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	print(state)
+	print(speed)
 	
 	velocity.x = 0
 	
@@ -49,12 +49,12 @@ func respawn() :
 	position = Vector2(screen_size.x/2, screen_size.y/2)
 	
 func set_state(new_state):
+	# Don't change prev_state unless actually moving to a new state
 	if state != new_state:
 		prev_state = state
 		state = new_state
 		
-	
-	
+	# So that the player actively collides with the ground for is_on_floor()
 	if prev_state == States.FALLING:
 		velocity.y = 1
 
@@ -65,7 +65,10 @@ func set_state(new_state):
 	elif new_state == States.JUMPING:
 		velocity.y = -jump_speed
 	elif new_state == States.FALLING:
-		speed = air_speed
+		if speed > air_speed:
+			speed -= 3
+		else:
+			speed = air_speed
 		if prev_state == States.JUMPING:
 			velocity.y += 0.75 * gravity
 		else:
