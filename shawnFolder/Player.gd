@@ -1,31 +1,41 @@
 extends KinematicBody2D
 
-export var walk_speed = 50
+export var walk_speed = 75
 export var run_speed = 150
+export var air_speed = 100
+export var jump_speed = 700
+export var gravity = 75
 var speed = walk_speed
+var velocity = Vector2.ZERO
 var screen_size
 
-enum States {IDLE, WALKING, RUNNING, JUMPING, FALLING}
+enum States {WALKING, RUNNING, JUMPING, FALLING}
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	screen_size = get_viewport_rect().size
 
-onready var state = States.IDLE
+onready var state = States.WALKING
+onready var prev_state = null
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	var velocity = Vector2.ZERO
+func _physics_process(delta):
+	print(state)
 	
-	if Input.is_action_pressed("shift_pressed"):
+	velocity.x = 0
+	
+	if !is_on_floor():
+		set_state(States.FALLING)
+	elif Input.is_action_just_pressed("move_up"):
+		set_state(States.JUMPING)
+	elif Input.is_action_pressed("shift_pressed"):
 		set_state(States.RUNNING)
 	else:
 		set_state(States.WALKING)
 	
 	velocity.x = Input.get_axis("move_left", "move_right") * speed
-	velocity.y = Input.get_axis("move_up", "move_down") * speed
-
-	move_and_slide(velocity)
+	
+	move_and_slide(velocity, Vector2(0,-1))
 	
 	screen_clamp()
 
@@ -39,16 +49,24 @@ func respawn() :
 	position = Vector2(screen_size.x/2, screen_size.y/2)
 	
 func set_state(new_state):
-	var prev_state = state
-	state = new_state
+	if state != new_state:
+		prev_state = state
+		state = new_state
+		
 	
-	if new_state == States.IDLE:
-		pass
-	elif new_state == States.WALKING:
+	
+	if prev_state == States.FALLING:
+		velocity.y = 1
+
+	if new_state == States.WALKING:
 		speed = walk_speed
 	elif new_state == States.RUNNING:
 		speed = run_speed
 	elif new_state == States.JUMPING:
-		pass
+		velocity.y = -jump_speed
 	elif new_state == States.FALLING:
-		pass
+		speed = air_speed
+		if prev_state == States.JUMPING:
+			velocity.y += 0.75 * gravity
+		else:
+			velocity.y += gravity
